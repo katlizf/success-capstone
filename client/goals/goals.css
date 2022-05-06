@@ -1,0 +1,134 @@
+*{
+    margin: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-weight: bolder;
+    background-color: rgb(173, 237, 173);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 50px;
+    height: 75px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.crumb {
+    border: none;
+    font-size: 17px;
+    width: auto;
+}
+
+#logo {
+    height: 140px;
+    width: auto;
+    display: inline-flex;
+    justify-content: flex-start;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+form#goal-form {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    background-color: rgb(139, 207, 235);
+    height: 250px;
+}
+
+p#add-form {
+    background-color: rgb(139, 207, 235);
+    font-size: 25px;
+    text-align: center;
+    height: auto;
+}
+
+p {
+    background-color: rgb(139, 207, 235);
+    font-size: 25px;
+    text-align: center;
+    height: 18px;
+}
+
+input.user-input {
+    background-color: rgb(216, 227, 232);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+button#add {
+    background-color: rgb(216, 227, 232);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.goals-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.goal-div {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(139, 207, 235);
+    width: 400px;
+}
+
+input.notes {
+    background-color: rgb(216, 227, 232);
+}
+
+button.finished {
+    background-color: rgb(216, 227, 232);   
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 18px;
+    text-align: center;
+}
+
+h4{
+    font-size: 10px;
+    text-align: center;
+}
+
+footer {
+    height: auto;
+}
+
+#footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.follow {
+    height: 25px;
+    width: auto;
+}

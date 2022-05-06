@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success: My Habits</title>
+    <link rel="icon" href="../images/app-logo.jpg">
+    <link rel="stylesheet" href="./habits.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img id="logo" src="../images/app-logo.jpg">
+        <nav class="button-group">
+            <button class="crumb"><a href="../landing/index.html">Home</a></button>
+            <button class="crumb"><a href="./habit-tracker.html">My Habits</a></button>
+            <button class="crumb"><a href="../goals/goal-tracker.html">My Goals</a></button>
+            <!-- <button class="crumb"><a href="../profile/profile.html">Profile</a></button> -->
+        </nav> 
+    </header>
+
+    <hr>
+    <br>
+
+    <h1>Let's track what you accomplished today!</h1>
+    <br>
+    <div>
+            <table>
+        <tr>
+            <th></th>
+            <th>Your Habits</th>
+            <th>5/1</th>
+            <th>5/2</th>
+            <th>5/3</th>
+            <th>5/4</th>
+            <th>5/5</th>
+            <th>5/6</th>
+            <th>5/7</th>
+            <th>5/8</th>
+            <th>5/9</th>
+            <th>5/10</th>
+            <th>5/11</th>
+            <th>5/12</th>
+            <th>5/13</th>
+            <th>5/14</th>
+            <th>5/15</th>
+            <th>5/16</th>
+            <th>5/17</th>
+            <th>5/18</th>
+            <th>5/19</th>
+            <th>5/20</th>
+            <th>5/21</th>
+            <th>5/22</th>
+            <th>5/23</th>
+            <th>5/24</th>
+            <th>5/25</th>
+            <th>5/26</th>
+            <th>5/27</th>
+            <th>5/28</th>
+            <th>5/29</th>
+            <th>5/30</th>
+            <th>5/31</th>
+        </tr>
+        <tr id="clone">
+            <td class="edit-icons">
+                <img id="remove" src="../images/remove-logo.png">
+                <!-- <img id="edit" src="../images/edit-icon.jpg"> -->
+            </td>
+    
+            <td>
+                <form id="habit-form"><input class="user-input" type="text" placeholder="Track a new habit here"></form>
+            </td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>
+            <td><input class="done" type="checkbox"></input></td>                
+        </tr>
+        <tr id="btn-row">
+            <td><button id="add-habit">+</button></td>
+        </tr>
+    </table>
+    </div>
+
+    <br>
+    <form id="recommendation">
+        <p>Need a recommendation?</p>
+        <button id="click-here">Click here!</button>
+    </form>
+    </div>
+
+    <br>
+    <hr>
+    <footer>
+        <div id="footer-info">
+            <section id="sign-up">
+                <h3>Sign up for our newsletter!</h3>
+                <input type="text" placeholder="email">
+                <button>Submit</button>
+            </section>
+            <section id="follow-us">
+                <h3>Follow us Here</h3>
+                <img class="follow" src="../images/fb-logo.jpg">
+                <img class="follow" src="../images/intagram-logo.jpg">
+                <img class="follow" src="../images/twitter-logo.jpg">
+            </section>
+        </div>
+        <h4>Katherine E. Anderson-Faber 2022</h4>
+    </footer>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./habits.js"></script>
+</body>
+</html>
