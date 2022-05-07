@@ -5,11 +5,11 @@ const addNewHabitButn = document.querySelector('button#add-habit')
 const recBtn = document.querySelector('button#click-here')
 
 
-const addNewRow = evt => {
+const cloneHabitCal = evt => {
     evt.preventDefault()
-    let clone = document.querySelector('tr#clone').cloneNode(true)
-    let buttonRow = document.getElementById('btn-row')
-    buttonRow.parentNode.insertBefore(clone, buttonRow)
+    let clone = document.querySelector('div#clone').cloneNode(true)
+    let buttonRow = document.getElementById('button#add-habit')
+    document.querySelector('section').appendChild(clone)
     
     // let newRow = document.createElement('tr')
     // let buttonRow = document.getElementById('btn-row')
@@ -33,5 +33,5 @@ const getRec = () => axios.get(baseURL).then(res => {
     alert(res.data)
     })
 
-addNewHabitButn.addEventListener('click', addNewRow)
+addNewHabitButn.addEventListener('click', cloneHabitCal)
 recBtn.addEventListener('click', getRec)

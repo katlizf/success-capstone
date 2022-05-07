@@ -38,6 +38,12 @@ h1 {
     font-size: 60px;
 }
 
+h2 {
+    font-size: 27px;
+    font-weight: bold;
+    background-color: rgb(139, 207, 235);
+}
+
 h3 {
     font-size: 18px;
     text-align: center;
@@ -48,19 +54,16 @@ h4{
     text-align: center;
 }
 
-div {
-    padding-left: 150px;
-}
-
-table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 70vw;
-}
-
-td {
-    width: fit-content;
+#add-habit {
+    cursor: pointer;
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: medium;
+    background-color: rgb(139, 207, 235);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 form#recommendation {
@@ -74,29 +77,81 @@ form#recommendation {
 
 p {
     background-color: rgb(139, 207, 235);
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
 button#click-here {
-    background-color: rgb(139, 207, 235);
+    background-color: rgb(216, 227, 232);
     cursor: pointer;
-    border-radius: 7px;
+    border-radius: 10px;
 }
 
-#add-habit {
-    cursor: pointer;
-}
-
-.done {
-    cursor: pointer;
-}
-
-.edit-icons {
+section.butns {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    width: 15px;
+    justify-content: space-around;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+form {
+    border-style: solid;
+    width: 530px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(139, 207, 235);
+}
+
+table {
+    width: 500px;
+    background-color: rgb(216, 227, 232);
+    border-radius: 10px;
+}
+
+.calendar {
+    text-align: center;
+}
+
+input.habitName {
+    height: 40px;
+    width: 450px;
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(216, 227, 232);
+}
+  
+.calendar tbody {
+    color: black;
+    background-color: rgb(216, 227, 232);
+}
+   
+.calendar tbody td:hover {
+    border: 2px solid #00addf;
+    cursor: pointer;
+}
+   
+.calendar td {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    width: 10px;
+    background-color: rgb(216, 227, 232);
+}
+
+.calendar tr {
+    background-color: rgb(216, 227, 232);
 }
 
 #remove {

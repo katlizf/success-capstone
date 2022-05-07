@@ -38,14 +38,17 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 form#goal-form {
     display: flex;
     flex-direction: column;
-    width: 170px;
+    width: 250px;
     background-color: rgb(139, 207, 235);
-    height: 250px;
+    height: 200px;
+    border-radius: 10px;
+    border-width: medium;
 }
 
 p#add-form {

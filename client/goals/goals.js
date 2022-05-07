@@ -10,7 +10,7 @@ const getGoals = () => axios.get(baseURL).then(goalsCallback).catch(errCallback)
 
 const createGoal = goalName => axios.post(`${baseURL}`, {goalName}).then(getGoals).catch(errCallback)
 
-const deleteGoal = id => axios.delete(`${baseURL}/${id}`).then(getGoals, console.log('hi')).catch(errCallback)
+const deleteGoal = id => axios.delete(`${baseURL}/${id}`).then(getGoals).catch(errCallback)
 
 
 const goalName = document.querySelector('input.user-input')
