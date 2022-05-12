@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="./habits.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <img id="logo" src="../images/app-logo.jpg">
         <nav class="button-group">
-            <button class="crumb"><a href="../landing/index.html">Home</a></button>
+            <button class="crumb"><a href="../landing/landing.html">Home</a></button>
             <button class="crumb"><a href="./habit-tracker.html">My Habits</a></button>
             <button class="crumb"><a href="../goals/goal-tracker.html">My Goals</a></button>
             <!-- <button class="crumb"><a href="../profile/profile.html">Profile</a></button> -->
@@ -25,87 +25,24 @@
     <hr>
     <br>
 
-    <h1>Let's track what you accomplished today!</h1>
+    <h1>My Habits</h1>
     <br>
-    
 
     <section class="butns">
-        <button id="add-habit">Click to Add Another Habit Tracker!</button>
+        <form id="habitForm">
+                <p id="add-habit">Add a New Habit</p>
+                <input class="userInput" type="text" placeholder="Name it!">
+                <button id="add-habit">Click to Add Another Habit Tracker!</button>
+        </form>
 
         <form id="recommendation">
-            <p>Need a recommendation?</p>
+            <p id="recommendation">Need a recommendation?</p>
             <button id="click-here">Click here!</button>
         </form>
     </section>
 
-    <section>
-        <div class="calendar" id="clone">
-            <form>
-                <input class="habitName" type="text" placeholder="Name your habit">
-                <h2>May</h2>  
-            <table>
-                <thread>
-                    <tr>
-                        <td>Su</td>
-                        <td>Mo</td>
-                        <td>Tu</td>
-                        <td>We</td>
-                        <td>Th</td>
-                        <td>Fr</td>
-                        <td>Sa</td>
-                    </tr>
-                </thread>
-                <tbody>
-                    <tr>
-                        <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">1</td>
-                        <td onclick="this.style.backgroundColor = 'green'">2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                        <td>13</td>
-                        <td>14</td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                        <td>19</td>
-                        <td>20</td>
-                        <td>21</td>
-                    </tr>
-                    <tr>
-                        <td>22</td>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
-                        <td>26</td>
-                        <td>27</td>
-                        <td>28</td>
-                    </tr>
-                    <tr>
-                        <td>29</td>
-                        <td>30</td>
-                        <td>31</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            </form>
-        </div>
-    </section>
+    <br>
+    <section class="habits-container"></section>
     <br>
     
     <hr>
@@ -123,7 +60,7 @@
                 <img class="follow" src="../images/twitter-logo.jpg">
             </section>
         </div>
-        <h4>Katherine E. Anderson-Faber 2022</h4>
+        <h4>©Copyright 2022 Katherine E. Anderson-Faber, All right Reserved</h4>
     </footer>
 
 

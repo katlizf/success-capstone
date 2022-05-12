@@ -2,7 +2,7 @@
     margin: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-family: 'Playfair Display', serif;
     font-weight: bolder;
     background-color: rgb(173, 237, 173);
 }
@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-    font-size: 27px;
+    font-size: 25px;
     font-weight: bold;
     background-color: rgb(139, 207, 235);
 }
@@ -50,100 +50,123 @@ h3 {
 }
 
 h4{
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
 }
 
-#add-habit {
-    cursor: pointer;
-    height: 50px;
-    width: 300px;
-    border-radius: 10px;
-    border-width: medium;
+.butns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#habitForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    width: 370px;
     background-color: rgb(139, 207, 235);
-    cursor: pointer;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+p#add-habit {
+    background-color: rgb(139, 207, 235);
     font-size: 18px;
     font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+}
+
+.userInput {
+    background-color: rgb(216, 227, 232);
+}
+
+button#add-habit {
+    background-color: rgb(216, 227, 232);
 }
 
 form#recommendation {
     display: flex;
     flex-direction: row;
     width: 370px;
+    height: 80px;
     text-align: center;
     background-color: rgb(139, 207, 235);
-    border-radius: 7px;
+    border-style: solid;
+    border-radius: 5px;
 }
 
-p {
+p#recommendation {
     background-color: rgb(139, 207, 235);
     font-size: 18px;
     text-align: center;
 }
 
-button#click-here {
+
+#click-here {
     background-color: rgb(216, 227, 232);
     cursor: pointer;
     border-radius: 10px;
+    height: 50px
 }
 
-section.butns {
+.habitName {
+    height: 40px;
+    width: 450px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    /* align-self: center; */
+    text-align: center;
+    background-color: rgb(139, 207, 235);
+    font-size: 35px;
 }
 
-section {
+.month {
+    background-color: rgb(139, 207, 235);
+}
+
+.habits-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border-radius: 10px;
+    justify-content: space-around;
 }
 
-form {
+.new-habit {
+    width: 40vw;
+}
+
+.calendar {
     border-style: solid;
-    width: 530px;
+    width: 480px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: rgb(139, 207, 235);
 }
 
 table {
-    width: 500px;
+    width: 460px;
     background-color: rgb(216, 227, 232);
     border-radius: 10px;
 }
 
-.calendar {
-    text-align: center;
-}
-
-input.habitName {
-    height: 40px;
-    width: 450px;
-    display: flex;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgb(216, 227, 232);
-}
-  
 .calendar tbody {
     color: black;
     background-color: rgb(216, 227, 232);
 }
-   
+
 .calendar tbody td:hover {
     border: 2px solid #00addf;
     cursor: pointer;
 }
-   
+
 .calendar td {
-    border: 2px solid transparent;
     border-radius: 50%;
     display: inline-block;
-    height: 10px;
+    height: 15px;
     line-height: 10px;
     text-align: center;
     width: 10px;
@@ -154,18 +177,29 @@ input.habitName {
     background-color: rgb(216, 227, 232);
 }
 
-#remove {
-    height: 21px;
-    width: auto;
-}
-
-#edit {
-    height: 21px;
-    width: auto;
+#done {
+    width: 65px;
+    background-color: rgb(216, 227, 232);  
+    text-align: center;
+    border-radius: 5px;
 }
 
 footer {
     height: auto;
+}
+
+#sign-up {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+#follow-us {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
 }
 
 #footer-info {
@@ -174,7 +208,7 @@ footer {
     justify-content: space-evenly;
 }
 
-.follow {
+img.follow {
     height: 25px;
     width: auto;
 }
