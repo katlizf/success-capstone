@@ -6,6 +6,7 @@ const {seed} = require('./seed')
 const {getHabits, createHabit, deleteHabit, getGoals, createGoal, getRec, updateGoal, deleteGoal, getProfile, createProfile} = require('./controller')
 
 const app = express()
+const path = require('path')
 
 app.use(express.json())
 app.use(cors())
