@@ -11,7 +11,18 @@ const path = require('path')
 
 app.use(express.json())
 app.use(cors())
-app.use('/static', express.static(path.join(__dirname, 'client')))
+// app.use('/static', express.static(path.join(__dirname, 'client')))
+app.use(express.static("client"))
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
+})
+app.get('/styles', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/landing/landing.css'))
+})
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
+})
 
 app.post('/seed', seed)
 
@@ -26,17 +37,6 @@ app.delete(`/client/goals/:id`, deleteGoal)
 app.get(`/client/profile`, getProfile)
 app.post(`/client/profile`, createProfile)
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
-})
-
-app.get('/styles', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/landing/landing.css'))
-})
-
-app.get(`/js`, (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
-})
 
 const port = process.env.PORT || SERVER_PORT
 
