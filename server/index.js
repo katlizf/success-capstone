@@ -8,6 +8,7 @@ const {getHabits, createHabit, deleteHabit, getGoals, createGoal, getRec, update
 const app = express()
 const path = require('path')
 
+
 app.use(express.json())
 app.use(cors())
 app.use('/static', express.static(path.join(__dirname, 'client')))
@@ -26,6 +27,14 @@ app.get(`/client/profile`, getProfile)
 app.post(`/client/profile`, createProfile)
 
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
+})
+
+app.get('/styles', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/landing/landing.css'))
+})
+
+app.get(`/js`, (req, res) => {
     res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
 })
 
