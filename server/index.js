@@ -21,7 +21,7 @@ app.get('/styles', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/landing/landing.css'))
 })
 app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
+    res.sendFile(path.join(__dirname, '../client/landing/landing.js'))
 })
 
 app.post('/seed', seed)
