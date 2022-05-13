@@ -24,6 +24,16 @@ app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/landing/landing.js'))
 })
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/habits/habit-tracker.html'))
+})
+app.get('/styles', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/habits/habits.css'))
+})
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/habits/habits.js'))
+})
+
 app.post('/seed', seed)
 
 app.get(`/client/habits`, getHabits)
