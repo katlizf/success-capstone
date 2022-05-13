@@ -11,7 +11,8 @@ const path = require('path')
 
 app.use(express.json())
 app.use(cors())
-app.use(express.static("client"))
+app.use('/static', express.static(path.join(__dirname, 'client')))
+// app.use(express.static("client"))
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
