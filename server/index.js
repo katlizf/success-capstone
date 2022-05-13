@@ -13,6 +13,7 @@ app.use(express.json())
 app.use(cors())
 // app.use('/static', express.static(path.join(__dirname, 'client')))
 app.use(express.static("client"))
+// app.use(express.static("server"))
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/landing/landing.html'))
@@ -24,15 +25,6 @@ app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/landing/landing.js'))
 })
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/habits/habit-tracker.html'))
-})
-app.get('/styles', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/habits/habits.css'))
-})
-app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/habits/habits.js'))
-})
 
 app.post('/seed', seed)
 

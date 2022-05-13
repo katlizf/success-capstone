@@ -38,7 +38,7 @@ const openForm = evt => {
     evt.preventDefault()
     document.querySelector('div.log-popup').style.display = "block"
 }
-signUpBtn.addEventListener('click', openForm)
+// signUpBtn.addEventListener('click', openForm)
 
 // const closeForm = evt => {
 //     evt.preventDefault()
