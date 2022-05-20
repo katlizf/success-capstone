@@ -1,4 +1,4 @@
-const baseURL = `https://capstone-devmountain-ka.herokuapp.com/habits`
+const baseURL = `https://capstone-devmountain-ka.herokuapp.com/client/habits`
 
 const habitsCallback = ({data: habits}) => displayHabits(habits)
 const errCallback = err => console.log(err.response.data)
