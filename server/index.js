@@ -27,7 +27,7 @@ app.post('/seed', seed)
 
 app.get(`/client/habits`, getHabits)
 app.post(`/client/habits`, createHabit)
-app.put(`client/habits:id`, updateHabit)
+// app.put(`client/habits:id`, updateHabit)
 app.delete(`/client/habits/:id`, deleteHabit)
 app.get(`/client/recomm`, getRec)
 app.get(`/client/goals`, getGoals)

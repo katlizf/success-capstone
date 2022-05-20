@@ -34,18 +34,18 @@ module.exports = {
             .then(res.sendStatus(200))
             .catch(err => console.log(err))            
     },
-    updateHabit: (req, res) => {
-      let {id} = req.params      
-      let {date} = req.body
+    // updateHabit: (req, res) => {
+    //   let {id} = req.params      
+    //   let {date} = req.body
 
-        sequelize.query(`
-        UPDATE user_habits
-        SET date = '${date}'
-        WHERE habit_id = ${id};`)
+    //     sequelize.query(`
+    //     UPDATE user_habits
+    //     SET date = '${date}'
+    //     WHERE habit_id = ${id};`)
 
-        .then(res.sendStatus(200))
-        .catch(err => console.log(err))
-    },
+    //     .then(res.sendStatus(200))
+    //     .catch(err => console.log(err))
+    // },
     deleteHabit: (req, res) => {
         let {id} = req.params
         sequelize.query(

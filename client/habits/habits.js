@@ -12,7 +12,7 @@ const date = document.querySelector('td')
 
 const getHabits = () => axios.get(baseURL).then(habitsCallback).catch(errCallback)
 const createHabit = habitName => axios.post(`${baseURL}/`, {habitName}).then(getHabits).catch(errCallback)
-const updateHabit = (id, date) => axios.put(`${baseURL}/${id}`, {date})
+// const updateHabit = (id, date) => axios.put(`${baseURL}/${id}`, {date})
 const deleteHabit = id => axios.delete(`${baseURL}/${id}`).then(getHabits).catch(errCallback)
 
 
@@ -61,7 +61,7 @@ const createHabitBoard = habit => {
                 </tr>
             <tbody>
                 <tr>
-                    <td onClick="highlight(this.element)" id="1">1</td>
+                    <td onClick="highlight(this.id)" id="1">1</td>
                     <td onClick="highlight(this.id)" id="2">2</td>
                     <td onClick="highlight(this.id)" id="3">3</td>
                     <td onClick="highlight(this.id)" id="4">4</td>
