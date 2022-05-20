@@ -31,7 +31,8 @@ module.exports = {
 
         create table user_habits (
             habit_id SERIAL PRIMARY KEY,
-            habit_name VARCHAR(80) NOT NULL
+            habit_name VARCHAR(80) NOT NULL,
+            date VARCHAR(300)
         );
 
         create table user_goals (
@@ -39,6 +40,7 @@ module.exports = {
             goal_name VARCHAR(100) NOT NULL,
             progress_notes VARCHAR(5000)
         );
+
         `).then(() => {
             console.log('DB seeded!')
             res.sendStatus(200)

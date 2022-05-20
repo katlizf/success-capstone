@@ -3,7 +3,7 @@ const cors = require('cors')
 require('dotenv').config()
 const {SERVER_PORT} = process.env
 const {seed} = require('./seed')
-const {getHabits, createHabit, deleteHabit, getGoals, createGoal, getRec, updateGoal, deleteGoal, getProfile, createProfile} = require('./controller')
+const {getHabits, createHabit, updateHabit, deleteHabit, getGoals, createGoal, getRec, updateGoal, deleteGoal, getProfile, createProfile} = require('./controller')
 
 const app = express()
 const path = require('path')
@@ -27,6 +27,7 @@ app.post('/seed', seed)
 
 app.get(`/client/habits`, getHabits)
 app.post(`/client/habits`, createHabit)
+app.put(`client/habits:id`, updateHabit)
 app.delete(`/client/habits/:id`, deleteHabit)
 app.get(`/client/recomm`, getRec)
 app.get(`/client/goals`, getGoals)

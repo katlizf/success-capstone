@@ -13,14 +13,13 @@ const sequelize = new Sequelize(CONNECTION_STRING,
         }
 })
 
-let goalId = 1
 
 module.exports = {
     getHabits: (req, res) => {
         sequelize.query(
-            `SELECT *
-            FROM user_habits;`
-        )
+            `SELECT 
+            FROM user_habits;`)
+
             .then(dbRes => res.status(200).send(dbRes[0]))
             .catch(err => console.log(err))
     },
@@ -28,19 +27,32 @@ module.exports = {
         const {habitName} = req.body
 
         sequelize.query (`
-            INSERT INTO user_habits (habit_name)
-            VALUES ('${habitName.habitName}')
-            RETURNING *`
-        )
+            INSERT INTO user_habits (habit_name, date)
+            VALUES ('${habitName.habitName}', '')
+            RETURNING *`)
+
             .then(res.sendStatus(200))
             .catch(err => console.log(err))            
+    },
+    updateHabit: (req, res) => {
+      let {id} = req.params      
+      let {date} = req.body
+
+        sequelize.query(`
+        UPDATE user_habits
+        SET date = '${date}'
+        WHERE habit_id = ${id};`)
+
+        .then(res.sendStatus(200))
+        .catch(err => console.log(err))
     },
     deleteHabit: (req, res) => {
         let {id} = req.params
         sequelize.query(
-        `DELETE
-        FROM user_habits
-        WHERE habit_id = ${id}`)
+            `DELETE
+            FROM user_habits
+            WHERE habit_id = ${id}`)
+
             .then(res.sendStatus(200))
             .catch(err => console.log(err))
     },
@@ -66,9 +78,10 @@ module.exports = {
         sequelize.query(
         `SELECT *
         FROM user_goals;`
+
         )
-            .then(dbRes => res.status(200).send(dbRes[0]))
-            .catch(err => console.log(err))
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
     },
     createGoal: (req, res) => {
         const {goalName} = req.body
@@ -78,8 +91,8 @@ module.exports = {
             VALUES ('${goalName.goalName}', '')
             RETURNING *`)
 
-            .then(res.sendStatus(200))
-            .catch(err => console.log(err))            
+        .then(res.sendStatus(200))
+        .catch(err => console.log(err))            
     },
     updateGoal: (req, res) => {
         let {id} = req.params
@@ -89,8 +102,9 @@ module.exports = {
         UPDATE user_goals
         SET progress_notes = '${progressNotes}'
         WHERE goal_id = ${id};`)
-            .then(res.sendStatus(200))
-            .catch(err => console.log(err))
+
+        .then(res.sendStatus(200))
+        .catch(err => console.log(err))
     },
     deleteGoal: (req, res) => {
         let {id} = req.params
@@ -99,8 +113,9 @@ module.exports = {
         DELETE
         FROM user_goals
         WHERE goal_id = ${id}`)
-            .then(res.sendStatus(200))
-            .catch(err => console.log(err))
+
+        .then(res.sendStatus(200))
+        .catch(err => console.log(err))
     },
     createProfile: (req, res) => {
         const {firstName, lastName, username, email, password} = req.body
@@ -108,14 +123,16 @@ module.exports = {
         sequelize.query(`
         INSERT INTO user_profile (first_name, last_name, username, email, password)
         VALUES ('${firstName}', '${lastName}', '${username}', '${email}', '${password}');`)
-            .then(res.sendStatus(200))
-            .catch(err => console.log(err))
+
+        .then(res.sendStatus(200))
+        .catch(err => console.log(err))
     },
     getProfile: (req, res) => {
         sequelize.query(
         `SELECT *
         FROM user_porfile;`)
-            .then(dbRes => res.status(200).send(dbRes[0]))
-            .catch(err => console.log(err))
+
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
     }
 }

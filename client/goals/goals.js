@@ -6,6 +6,7 @@ const errCallback = err => console.log(err.response.data)
 const goalsContainer = document.querySelector('section#goals-container')
 const goalName = document.querySelector('input.user-input')
 const progressNotes = document.querySelector('textarea.notes')
+const sumbmit = document.querySelector('button#submit')
 
 
 const getGoals = () => axios.get(baseURL).then(goalsCallback).catch(errCallback)
@@ -50,3 +51,11 @@ const displayGoals = arr => {
 }
 
 getGoals()
+
+const signUp = evt => {
+    evt.preventDefault()
+
+    alert('Thanks for signing up!')
+    document.querySelector('input#signupEmail').value = ' '
+}
+sumbmit.addEventListener('click', signUp)
