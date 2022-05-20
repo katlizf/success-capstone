@@ -1,4 +1,4 @@
-const baseURL = `http://localhost:5000/client/habits`
+const baseURL = `https://capstone-devmountain-ka.herokuapp.com/habits`
 
 const habitsCallback = ({data: habits}) => displayHabits(habits)
 const errCallback = err => console.log(err.response.data)
@@ -16,7 +16,7 @@ const deleteHabit = id => axios.delete(`${baseURL}/${id}`).then(getHabits).catch
 
 const getRec = evt => {
     evt.preventDefault()
-    axios.get(`http://localhost:5000/client/recomm`).then(res => {
+    axios.get(`https://capstone-devmountain-ka.herokuapp.com/client/recomm`).then(res => {
     alert(res.data)
     })
 }

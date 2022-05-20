@@ -11,7 +11,6 @@ const path = require('path')
 
 app.use(express.json())
 app.use(cors())
-// app.use('/static', express.static(path.join(__dirname, 'client')))
 app.use(express.static("client"))
 
 app.get('/', (req, res) => {
@@ -22,9 +21,6 @@ app.get('/styles', (req, res) => {
 })
 app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/landing/landing.js'))
-})
-app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/habits/habits.js'))
 })
 
 app.post('/seed', seed)
