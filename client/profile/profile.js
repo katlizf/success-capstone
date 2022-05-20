@@ -1,4 +1,4 @@
-const baseURL = `https://capstone-devmountain-ka.herokuapp.com/profile`
+const baseURL = `https://capstone-devmountain-ka.herokuapp.com/`
 
 const errCallback = err => console.log(err.response.data)
 

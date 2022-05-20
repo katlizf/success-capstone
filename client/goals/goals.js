@@ -1,4 +1,4 @@
-const baseURL = `https://capstone-devmountain-ka.herokuapp.com/goals`
+const baseURL = `http://localhost:5000/client/goals`
 
 const goalsCallback = ({data: goals}) => displayGoals(goals)
 const errCallback = err => console.log(err.response.data)
