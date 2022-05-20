@@ -116,7 +116,6 @@ p#recommendation {
     height: 40px;
     width: 450px;
     display: flex;
-    /* align-self: center; */
     text-align: center;
     background-color: rgb(139, 207, 235);
     font-size: 35px;
@@ -153,11 +152,6 @@ table {
     border-radius: 10px;
 }
 
-.calendar tbody {
-    color: black;
-    background-color: rgb(216, 227, 232);
-}
-
 .calendar tbody td:hover {
     border: 2px solid #00addf;
     cursor: pointer;
@@ -170,6 +164,7 @@ table {
     line-height: 10px;
     text-align: center;
     width: 10px;
+    color: black;
     background-color: rgb(216, 227, 232);
 }
 

@@ -3,6 +3,7 @@ const baseURL = `http://localhost:5000/client/profile`
 // const profileCallback = {(data: profile)} => displayProfile(profile)
 const errCallback = err => console.log(err.response.data)
 
+const sumbmit = document.querySelector('button#submit')
 const signUpBtn = document.querySelector('button#log-btn')
 const firstName = document.querySelector('input#first-name')
 const lastName = document.querySelector('input#last-name')
@@ -38,11 +39,13 @@ const openForm = evt => {
     evt.preventDefault()
     document.querySelector('div.log-popup').style.display = "block"
 }
-// signUpBtn.addEventListener('click', openForm)
 
-// const closeForm = evt => {
-//     evt.preventDefault()
-//     document.querySelector('div.log-popup').style.display = "none"
-// }
-// submitBtn.addEventListener('click', closeForm)
+
+const signUp = evt => {
+    evt.preventDefault()
+
+    alert('Thanks for signing up!')
+    document.querySelector('input#signupEmail').value = ' '
+}
+sumbmit.addEventListener('click', signUp)
 

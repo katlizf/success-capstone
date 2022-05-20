@@ -13,7 +13,6 @@ const createGoal = goalName => axios.post(`${baseURL}`, {goalName}).then(getGoal
 const updateGoal = (id, progressNotes) => axios.put(`${baseURL}/${id}`, {progressNotes}).then(getGoals).catch(errCallback)
 const deleteGoal = id => axios.delete(`${baseURL}/${id}`).then(getGoals).catch(errCallback)
 
-// 
 
 const submitHandler = evt => {
     evt.preventDefault()
@@ -26,7 +25,6 @@ const submitHandler = evt => {
 }
 document.querySelector('form#goal-form').addEventListener('submit', submitHandler)
 
-// 
 
 const createGoalBoard = goal => {
     console.log(goal)
@@ -42,7 +40,6 @@ const createGoalBoard = goal => {
     goalsContainer.appendChild(newGoal)
 }
 
-// 
 
 const displayGoals = arr => {
     goalsContainer.innerHTML = ``
@@ -51,7 +48,5 @@ const displayGoals = arr => {
         createGoalBoard(arr[i])
     }
 }
-
-// 
 
 getGoals()

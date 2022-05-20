@@ -59,45 +59,45 @@ const createHabitBoard = habit => {
                 </tr>
             <tbody>
                 <tr>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">1</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">2</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">3</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">4</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">5</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">6</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">7</td>
+                    <td onClick="highlight(this.id)" id="1">1</td>
+                    <td onClick="highlight(this.id)" id="2">2</td>
+                    <td onClick="highlight(this.id)" id="3">3</td>
+                    <td onClick="highlight(this.id)" id="4">4</td>
+                    <td onClick="highlight(this.id)" id="5">5</td>
+                    <td onClick="highlight(this.id)" id="6">6</td>
+                    <td onClick="highlight(this.id)" id="7">7</td>
                 </tr>
                 <tr>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">8</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">9</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">10</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">11</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">12</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">13</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">14</td>
+                    <td onClick="highlight(this.id)" id="8">8</td>
+                    <td onClick="highlight(this.id)" id="9">9</td>
+                    <td onClick="highlight(this.id)" id="10">10</td>
+                    <td onClick="highlight(this.id)" id="11">11</td>
+                    <td onClick="highlight(this.id)" id="12">12</td>
+                    <td onClick="highlight(this.id)" id="13">13</td>
+                    <td onClick="highlight(this.id)" id="14">14</td>
                 </tr>
                 <tr>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">15</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">16</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">17</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">18</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">19</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">20</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">21</td>
+                    <td onClick="highlight(this.id)" id="15">15</td>
+                    <td onClick="highlight(this.id)" id="16">16</td>
+                    <td onClick="highlight(this.id)" id="17">17</td>
+                    <td onClick="highlight(this.id)" id="18">18</td>
+                    <td onClick="highlight(this.id)" id="19">19</td>
+                    <td onClick="highlight(this.id)" id="20">20</td>
+                    <td onClick="highlight(this.id)" id="21">21</td>
                 </tr>
                 <tr>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">22</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">23</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">24</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">25</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">26</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">27</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">28</td>
+                    <td onClick="highlight(this.id)" id="22">22</td>
+                    <td onClick="highlight(this.id)" id="23">23</td>
+                    <td onClick="highlight(this.id)" id="24">24</td>
+                    <td onClick="highlight(this.id)" id="25">25</td>
+                    <td onClick="highlight(this.id)" id="26">26</td>
+                    <td onClick="highlight(this.id)" id="27">27</td>
+                    <td onClick="highlight(this.id)" id="28">28</td>
                 </tr>
                 <tr>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">29</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">30</td>
-                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">31</td>
+                    <td onClick="highlight(this.id)" id="29">29</td>
+                    <td onClick="highlight(this.id)" id="30">30</td>
+                    <td onClick="highlight(this.id)" id="31">31</td>
                     <td ></td>
                     <td></td>
                     <td></td>
@@ -119,6 +119,20 @@ const displayHabits = arr => {
     }
 }
 
-// 
 
 getHabits()
+
+
+let clicks = 0
+const highlight = (clicked_id) => {
+    let td = document.getElementById(clicked_id)
+    clicks++
+
+    if (clicks%2 !== 0) {
+        td.style.backgroundColor = '#5797B2'
+        td.style.color = 'white'
+    } else if (clicks%2 === 0) {
+        td.style.backgroundColor = 'rgb(216, 227, 232)'
+        td.style.color= 'black'
+    }
+}
