@@ -17,7 +17,7 @@ const sequelize = new Sequelize(CONNECTION_STRING,
 module.exports = {
     getHabits: (req, res) => {
         sequelize.query(
-            `SELECT 
+            `SELECT *
             FROM user_habits;`)
 
             .then(dbRes => res.status(200).send(dbRes[0]))
@@ -27,25 +27,13 @@ module.exports = {
         const {habitName} = req.body
 
         sequelize.query (`
-            INSERT INTO user_habits (habit_name, date)
-            VALUES ('${habitName.habitName}', '')
+            INSERT INTO user_habits (habit_name)
+            VALUES ('${habitName.habitName}')
             RETURNING *`)
 
             .then(res.sendStatus(200))
             .catch(err => console.log(err))            
     },
-    // updateHabit: (req, res) => {
-    //   let {id} = req.params      
-    //   let {date} = req.body
-
-    //     sequelize.query(`
-    //     UPDATE user_habits
-    //     SET date = '${date}'
-    //     WHERE habit_id = ${id};`)
-
-    //     .then(res.sendStatus(200))
-    //     .catch(err => console.log(err))
-    // },
     deleteHabit: (req, res) => {
         let {id} = req.params
         sequelize.query(

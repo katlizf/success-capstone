@@ -1,4 +1,4 @@
-const baseURL = `https://capstone-devmountain-ka.herokuapp.com/client/habits`
+const baseURL = `http://localhost:5000/client/habits`
 
 const habitsCallback = ({data: habits}) => displayHabits(habits)
 const errCallback = err => console.log(err.response.data)
@@ -6,19 +6,18 @@ const errCallback = err => console.log(err.response.data)
 const habitsContainer = document.querySelector('section.habits-container')
 const recBtn = document.querySelector('form#recommendation')
 const habitName = document.querySelector('input.userInput')
-const sumbmit = document.querySelector('button#submit')
-const date = document.querySelector('td')
+const submit = document.querySelector('button#submit')
 
 
 const getHabits = () => axios.get(baseURL).then(habitsCallback).catch(errCallback)
-const createHabit = habitName => axios.post(`${baseURL}/`, {habitName}).then(getHabits).catch(errCallback)
-// const updateHabit = (id, date) => axios.put(`${baseURL}/${id}`, {date})
+const createHabit = habitName => axios.post(`${baseURL}`, {habitName}).then(getHabits).catch(errCallback)
 const deleteHabit = id => axios.delete(`${baseURL}/${id}`).then(getHabits).catch(errCallback)
+
 
 
 const getRec = evt => {
     evt.preventDefault()
-    axios.get(`https://capstone-devmountain-ka.herokuapp.com/client/recomm`).then(res => {
+    axios.get(`http://localhost:5000/client/recomm`).then(res => {
     alert(res.data)
     })
 }
@@ -61,45 +60,45 @@ const createHabitBoard = habit => {
                 </tr>
             <tbody>
                 <tr>
-                    <td onClick="highlight(this.id)" id="1">1</td>
-                    <td onClick="highlight(this.id)" id="2">2</td>
-                    <td onClick="highlight(this.id)" id="3">3</td>
-                    <td onClick="highlight(this.id)" id="4">4</td>
-                    <td onClick="highlight(this.id)" id="5">5</td>
-                    <td onClick="highlight(this.id)" id="6">6</td>
-                    <td onClick="highlight(this.id)" id="7">7</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">1</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">2</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">3</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">4</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">5</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">6</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">7</td>
                 </tr>
                 <tr>
-                    <td onClick="highlight(this.id)" id="8">8</td>
-                    <td onClick="highlight(this.id)" id="9">9</td>
-                    <td onClick="highlight(this.id)" id="10">10</td>
-                    <td onClick="highlight(this.id)" id="11">11</td>
-                    <td onClick="highlight(this.id)" id="12">12</td>
-                    <td onClick="highlight(this.id)" id="13">13</td>
-                    <td onClick="highlight(this.id)" id="14">14</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">8</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">9</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">10</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">11</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">12</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">13</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">14</td>
                 </tr>
                 <tr>
-                    <td onClick="highlight(this.id)" id="15">15</td>
-                    <td onClick="highlight(this.id)" id="16">16</td>
-                    <td onClick="highlight(this.id)" id="17">17</td>
-                    <td onClick="highlight(this.id)" id="18">18</td>
-                    <td onClick="highlight(this.id)" id="19">19</td>
-                    <td onClick="highlight(this.id)" id="20">20</td>
-                    <td onClick="highlight(this.id)" id="21">21</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">15</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">16</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">17</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">18</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">19</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">20</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">21</td>
                 </tr>
                 <tr>
-                    <td onClick="highlight(this.id)" id="22">22</td>
-                    <td onClick="highlight(this.id)" id="23">23</td>
-                    <td onClick="highlight(this.id)" id="24">24</td>
-                    <td onClick="highlight(this.id)" id="25">25</td>
-                    <td onClick="highlight(this.id)" id="26">26</td>
-                    <td onClick="highlight(this.id)" id="27">27</td>
-                    <td onClick="highlight(this.id)" id="28">28</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">22</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">23</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">24</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">25</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">26</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">27</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">28</td>
                 </tr>
                 <tr>
-                    <td onClick="highlight(this.id)" id="29">29</td>
-                    <td onClick="highlight(this.id)" id="30">30</td>
-                    <td onClick="highlight(this.id)" id="31">31</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">29</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">30</td>
+                    <td onclick="this.style.backgroundColor = '#5797B2', this.style.color='white'">31</td>
                     <td ></td>
                     <td></td>
                     <td></td>
@@ -112,6 +111,7 @@ const createHabitBoard = habit => {
     </div>`
     habitsContainer.appendChild(newHabit)
 }
+// on click only allows background color and color to change once, not toggle between
 
 
 const displayHabits = arr => {
@@ -121,24 +121,25 @@ const displayHabits = arr => {
     }
 }
 
+// 
 
 getHabits()
 
 
-let clicks = 0
-const highlight = (clicked_id) => {    
-    let td = document.getElementById(clicked_id)
-    clicks++
+// let clicks = 0
+// const highlight = (clicked_id) => {    
+//     let td = document.getElementById(clicked_id)
+//     clicks++
     
-    if (clicks%2 !== 0) {
-        td.style.backgroundColor = '#5797B2'
-        td.style.color = 'white'
-    } else if (clicks%2 === 0) {
-        td.style.backgroundColor = 'rgb(216, 227, 232)'
-        td.style.color= 'black'
-    }
-}
-
+//     if (clicks%2 !== 0) {
+//         td.style.backgroundColor = '#5797B2'
+//         td.style.color = 'white'
+//     } else if (clicks%2 === 0) {
+//         td.style.backgroundColor = 'rgb(216, 227, 232)'
+//         td.style.color= 'black'
+//     }
+// }
+// not specific to the calendar that's clicked on, only specific to fist calendar dynamically created
 
 const signUp = evt => {
     evt.preventDefault()

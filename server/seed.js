@@ -31,8 +31,7 @@ module.exports = {
 
         create table user_habits (
             habit_id SERIAL PRIMARY KEY,
-            habit_name VARCHAR(80) NOT NULL,
-            date VARCHAR(300)
+            habit_name VARCHAR(80) NOT NULL
         );
 
         create table user_goals (
