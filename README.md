@@ -8,8 +8,6 @@ Helps users maintain their chosen habits and set and track the progress of goals
  * PostgresSQL
  * Axios
 
-Practicing React and MUI
-
 # How to set up this project
 
 * Clone this repository to your machine
