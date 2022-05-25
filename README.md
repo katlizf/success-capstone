@@ -1,7 +1,26 @@
 # Success
 
-Success helps users maintain their chosen habits and set and track the progress of goals they’d like to achieve. For this web application, I utilized express, node, and postgresSQL, as well as axios requests to access my database. &nbsp;
+Helps users maintain their chosen habits and set and track the progress of goals they’d like to achieve.
 
+# Technology Used
+ * Express
+ * Node
+ * PostgresSQL
+ * Axios
+
+Practicing React and MUI
+
+# How to set up this project
+
+* Clone this repository to your machine
+
+* Open project in command prompt or preferred terminal
+
+* Once the project is open, run `npm install` to install dependencies
+
+* Once installed, run `npm start`
+
+# Description
 
 On the landing page, users can familiarize themselves with the site by reading a brief overview. As they scroll down, they will see a snapshot of the other pages of the site and read a brief description of each pages’ functionality. &nbsp;
 
