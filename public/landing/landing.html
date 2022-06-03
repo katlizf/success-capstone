@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success: Home</title>
+    <link rel="icon" href="../images/app-logo.jpg" />
+    <link rel="stylesheet" type="text/css" href="/landing/landing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <img id="logo" src="../images/app-logo.jpg" />
+      <nav class="button-group">
+        <button class="crumb"><a href="/landing/landing.html">Home</a></button>
+        <button class="crumb">
+          <a href="../habits/habit-tracker.html">My Habits</a>
+        </button>
+        <button class="crumb">
+          <a href="../goals/goal-tracker.html">My Goals</a>
+        </button>
+        <!-- <button class="crumb"><a href="../profile/profile.html">Profile</a></button> -->
+      </nav>
+    </header>
+
+    <hr />
+    <br />
+    <br />
+
+    <div id="body">
+      <h1>Welcome to Success!</h1>
+      <br />
+      <h2>Let us help you track and manage your habits and goals!</h2>
+      <h2>
+        We want to help promote lasting habits you'd like to integrate into your
+        life and help make it easier for you to reach your goals.
+      </h2>
+      <br />
+      <div id="signup-login">
+        <!-- <button id="log-btn">Sign-up Now / Login Here</button> -->
+      </div>
+    </div>
+
+    <div class="log-popup">
+      <section id="log-section">
+        <form id="create-profile">
+          <p id="login-text">Sign-up now by completing the below form</p>
+          <label for="first-name"
+            >First Name:<input class="login-form" type="text" id="first-name"
+          /></label>
+          <label for="last-name"
+            >Last Name:<input class="login-form" type="text" id="last-name"
+          /></label>
+          <label for="username"
+            >Create a username:<input
+              class="login-form"
+              type="text"
+              id="username"
+          /></label>
+          <label for="email"
+            >Email address:<input class="login-form" type="text" id="email"
+          /></label>
+          <label for="password"
+            >Create a password:<input
+              class="login-form"
+              type="text"
+              id="password"
+          /></label>
+          <button class="submit-login" id="create-submit">Submit</button>
+        </form>
+        <form id="login">
+          <p id="login-text">Login to your account</p>
+          <label for="username"
+            >Username:<input class="login-form" type="text" id="username"
+          /></label>
+          <label for="password"
+            >Create a password:<input
+              class="login-form"
+              type="text"
+              id="password"
+          /></label>
+          <button class="submit-login">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <br />
+
+    <section class="preview" id="habit-preview">
+      <img
+        class="preview-image"
+        src="../images/habits-screenshot.png"
+        alt="habits page screenshot"
+      />
+      <p>
+        You'll be able to track your habit acheivements day-by-day with our
+        habit tracker. Just click on each day to highlight it to indicate your
+        completion of the habit. You can add new habits you'd like to track
+        along the way or hit the "Done" button to remove a habit that you no
+        longer want to track.
+      </p>
+    </section>
+    <br />
+    <section class="preview" id="goal-preview" alt="goals page screenshot">
+      <p>
+        With our goal tracker, you'll be able to set goals for yourself and keep
+        yourself motivated and up to date on your progress by writing notes for
+        yourself. Once you reached your goal, you can click our "Achieved"
+        button to remove it.
+      </p>
+      <img class="preview-image" src="../images/goals-screenshot.png" />
+    </section>
+
+    <br />
+    <hr />
+    <footer>
+      <div id="footer-info">
+        <section id="sign-up">
+          <h3>Sign up for our newsletter!</h3>
+          <input type="text" placeholder="email" id="signupEmail" />
+          <button id="submit">Submit</button>
+        </section>
+        <section id="follow-us">
+          <h3>Follow us Here</h3>
+          <img class="follow" src="../images/fb-logo.jpg" />
+          <img class="follow" src="../images/intagram-logo.jpg" />
+          <img class="follow" src="../images/twitter-logo.jpg" />
+        </section>
+      </div>
+      <h4>© 2022 Katherine E. Anderson-Faber, All right Reserved</h4>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/landing/landing.js"></script>
+  </body>
+</html>
