@@ -17,7 +17,7 @@ const deleteHabit = id => axios.delete(`${baseURL}/${id}`).then(getHabits).catch
 
 const getRec = evt => {
     evt.preventDefault()
-    axios.get(`https://capstone-devmountain-ka.herokuapp.com/client/recomm`).then(res => {
+    axios.get(`https://capstone-devmountain-ka.herokuapp.com/public/recomm`).then(res => {
     alert(res.data)
     })
 }
