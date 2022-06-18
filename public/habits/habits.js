@@ -1,4 +1,4 @@
-const baseURL = `https://capstone-devmountain-ka.herokuapp.com/client/habits`
+const baseURL = `https://capstone-devmountain-ka.herokuapp.com/public/habits`
 
 const habitsCallback = ({data: habits}) => displayHabits(habits)
 const errCallback = err => console.log(err.response.data)
@@ -147,4 +147,4 @@ const signUp = evt => {
     alert('Thanks for signing up!')
     document.querySelector('input#signupEmail').value = ' '
 }
-sumbmit.addEventListener('click', signUp)
+submit.addEventListener('click', signUp)
