@@ -1,4 +1,4 @@
-const baseURL = `https://git.heroku.com/success-capstone.herokuapp.com/public/habits`
+const baseURL = `https://success-capstone.herokuapp.com/public/habits`
 
 const habitsCallback = ({data: habits}) => displayHabits(habits)
 const errCallback = err => console.log(err.response.data)
@@ -17,7 +17,7 @@ const deleteHabit = id => axios.delete(`${baseURL}/${id}`).then(getHabits).catch
 
 const getRec = evt => {
     evt.preventDefault()
-    axios.get(`https://git.heroku.com/success-capstone.herokuapp.com/public/recomm`).then(res => {
+    axios.get(`https://success-capstone.herokuapp.com/public/recomm`).then(res => {
     alert(res.data)
     })
 }
